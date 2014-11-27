@@ -1,0 +1,4 @@
+pgbouncer
+=========
+
+Dockerfile for pgbouncer
