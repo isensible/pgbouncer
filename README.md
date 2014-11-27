@@ -1,4 +1,4 @@
-= Dockerfile for pgbouncer
+== Dockerfile for pgbouncer
 
 docker image for pgbouncer based off of stackbrew/ubuntu:12.04
 
