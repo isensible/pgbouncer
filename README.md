@@ -3,9 +3,13 @@ Dockerfile for pgbouncer
 
 docker image for pgbouncer based off of stackbrew/ubuntu:12.04
 
-To pull this image: docker pull mbentley/ubuntu-pgbouncer
+To build this image:
 
-Example usage: docker run -i -t -d -p 6432:6432 --link postgres:pg mbentley/ubuntu-pgbouncer
+docker build -t isensible/pgbouncer .
+
+To run: 
+
+docker run -i -t -d -p 6432:6432 --link POSTGRES_NAME:pg isensible/pgbouncer
 
 This requires a link (named pg) to a postgres container or manually configured environment variables as follows:
 
