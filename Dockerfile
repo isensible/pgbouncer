@@ -9,7 +9,8 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install pgbouncer
 
-ADD run.sh /usr/local/bin/run
+COPY run.sh /usr/local/bin/run.sh
+RUN chmod 755 /usr/local/bin/run.sh
 
 EXPOSE 6432
-CMD ["/usr/local/bin/run"]
+CMD ["/usr/local/bin/run.sh"]
